@@ -75,7 +75,7 @@ const Header: React.FC = () => {
             </div>
           </Col>
           <Col xl={5}>
-            <div className="header-bottom__right header-five__btn d-flex align-items-center justify-content-end">
+            {/* <div className="header-bottom__right header-five__btn d-flex align-items-center justify-content-end">
               <div className="header-bottom__btn d-flex align-items-center">
                 <a className="tp-btn-yellow inner-color tp-btn-hover alt-color-black d-none d-md-inline-block" href="/register">
                   <span className="white-text">Sign up Now</span><b></b></a>
@@ -83,7 +83,10 @@ const Header: React.FC = () => {
                   <i className="fal fa-bars"></i>
                 </a>
               </div>
-            </div>
+            </div> */}
+                <div>
+          <button className={`${styles.buttonfx} ${styles.slidebottomleft}`}>Sign up Now</button>
+        </div>
           </Col>
         </Row>
       </div>

@@ -18,7 +18,8 @@
         margin: 8px 22px;
         cursor: pointer;
         transition: all .3s ease-out 0s;
-        & > a {
+
+        &>a {
             font-weight: 500;
             font-size: 17px;
             line-height: 14px;
@@ -26,18 +27,56 @@
             color: $dark;
         }
     }
-    
+    .buttonfx {
+        width: 162px;
+        height: 42px;
+        color: black;
+        outline: none;
+        background: transparent ;
+        border: none;
+        letter-spacing: 0.0625em;
+        padding: 8px 10px;
+        text-transform: uppercase;
+        line-height: 2;
+        position: relative;
+        display: inline-block;
+        text-decoration: none;
+        overflow: hidden;
+        border-radius: 50px;
+        font-weight: 600;
+        transition: all .5s;
+        z-index: 999;
+        cursor: pointer;
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            height: 100%;
+            background: black;
+            z-index: -1;
+            border-radius: 50px;
+            transform: translate3D(0, -100%, 0);
+            transition: all .5s;
+        }
+        &::before {
+            background: #ffce5a;
+            z-index: -2;
+            border-radius: 50px;
+            transform: translate3D(0, 0, 0);
+        }
+        &:hover {
+            color: white;
+        }
+        &:hover::after {
+            transform: translate3D(0, 0, 0);
+            transition: all .5s;
+        }
+    } 
+    .slidebottomleft::after {
+        transform: translate3D(100%, -100%, 0);
+    }
 }
-
-// .header-bottom__main-menu nav ul {
-//     margin-left: -45px;
-// }
-
-// .header-bottom__main-menu-5 nav ul li {
-//     margin: 0 22px;
-// }
-
-// .header-bottom__main_menu nav ul li {
-//     display: inline-block;
-//     margin: 0 17px;
-// }

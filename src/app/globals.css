@@ -21,5 +21,7 @@ body {
 .container {
   width: 1273px;
   margin: auto;
+  position: relative;
 }
+
 
