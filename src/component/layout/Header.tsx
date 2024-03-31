@@ -11,7 +11,7 @@ const Header: React.FC = () => {
     <div className={styles.header_sticky}>
       <div className={`container ${styles.mtTop}`}>
         <Row>
-          <Col xl={4}>
+          <Col xl={5} lg={5}>
             <div className={styles.header_bottom__logo}>
               <Link href={'/'}>
                 <Image property='true'
@@ -24,69 +24,67 @@ const Header: React.FC = () => {
               </Link>
             </div>
           </Col>
-          <Col xl={15}>
-            <div className={`${styles.header_bottom__main_menu} ${styles.text_center}`}>
-              <nav id='mobile_menu'>
+          <Col xl={11} lg={11}>
+            <div className={`${styles.header_bottom__main_menu}`}>
+              <nav id='mobile_menu' className={styles.menu}>
                 <ul>
-                  <li><a href="/">Home</a>
-                    {/* <ul className={styles.submenu}>
+                  <li className={styles.parend}><a href="/">Home</a>
+                    <ul className={styles.submenu}>
                       <li><a href="/">Data analytics</a></li>
                       <li><a href="/home-2">Payment Gateway</a></li>
                       <li><a href="/home-3">CRM Software</a></li>
                       <li><a href="/home-4">Security Software</a></li>
                       <li><a href="/home-5">Saas</a></li>
-                    </ul> */}
+                    </ul>
                   </li>
-                  <li>
+                  <li className={styles.parend}>
                     <a href="/about">Pages</a>
-                    {/* <ul className={styles.submenu}>
-                      <li><a href="/about">About</a></li>
-                      <li><a href="/service">Service</a></li>
-                      <li><a href="/service-details">Service Details</a></li>
-                      <li><a href="/team">Team</a></li>
-                      <li><a href="/team-details">Team Details</a></li>
-                      <li><a href="/career">Career</a></li>
-                      <li><a href="/career-details">Career Details</a></li>
-                      <li><a href="/integrations">Integrations</a></li>
-                      <li><a href="/price">Price</a></li>
-                      <li><a href="/register">Register</a></li>
-                      <li><a href="/sign-in">Signin</a></li>
-                      <li><a href="/404">404</a></li>
-                    </ul> */}
+                    <ul className={styles.submenu}>
+                      <li><a href="/">About</a></li>
+                      <li><a href="/home-2">Service</a></li>
+                      <li><a href="/home-3">Service Details</a></li>
+                      <li><a href="/home-4">Team</a></li>
+                      <li><a href="/home-5">Team Details</a></li>
+                      <li><a href="/home-5">Career</a></li>
+                      <li><a href="/home-5">Career Details</a></li>
+                      <li><a href="/home-5">Integrations</a></li>
+                      <li><a href="/home-5">Price</a></li>
+                      <li><a href="/home-5">Register</a></li>
+                      <li><a href="/home-5">Signin</a></li>
+                      <li><a href="/home-5">404</a></li>
+                    </ul>
                   </li>
-                  <li>
-                    <a href="/project">Projects</a>
-                    {/* <ul className={styles.submenu}>
-                      <li><a href="/project">Project</a></li>
-                      <li><a href="/project-details">Project Details</a></li>
-                    </ul> */}
+                  <li className={styles.parend}>
+                    <a href="/project">Blog</a>
+                    <ul className={styles.submenu}>
+                      <li><a href="/">Blog</a></li>
+                      <li><a href="/home-2">Blog List</a></li>
+                      <li><a href="/home-3">Blog Details</a></li>
+                      <li><a href="/home-4">Blog Details 02</a></li>
+                    </ul>
                   </li>
-                  <li>
-                    <a href="/blog">Blog</a>
-                    {/* <ul className={styles.submenu}>
-                      <li><a href="/blog">Blog</a></li>
-                      <li><a href="/blog-list">Blog List</a></li>
-                      <li><a href="/blog-details">Blog Details</a></li>
-                      <li><a href="/blog-details-2">Blog Details 02</a></li>
-                    </ul> */}
+                  <li className={styles.parend}>
+                    <a href="/blog">Pricing</a>
                   </li>
-                  <li><a href="/contact">Contact</a></li></ul>
+                  <li className={styles.parend}>
+                    <a href="/contact">Projects</a>
+                    <ul className={styles.submenu}>
+                      <li><a href="/home-2">Project</a></li>
+                      <li><a href="/home-3">Project Details</a></li>
+                    </ul>
+                  </li>
+                  <li className={styles.parend}><a href="/contact">Contact</a></li>
+                </ul>
               </nav>
             </div>
           </Col>
-          <Col xl={5}>
-            {/* <div className="header-bottom__right header-five__btn d-flex align-items-center justify-content-end">
-              <div className="header-bottom__btn d-flex align-items-center">
-                <a className="tp-btn-yellow inner-color tp-btn-hover alt-color-black d-none d-md-inline-block" href="/register">
-                  <span className="white-text">Sign up Now</span><b></b></a>
-                <a className="header-bottom__bar tp-menu-bar d-lg-none">
-                  <i className="fal fa-bars"></i>
-                </a>
-              </div>
-            </div> */}
-                <div>
-          <button className={`${styles.buttonfx} ${styles.slidebottomleft}`}>Sign up Now</button>
-        </div>
+          <Col xl={8} lg={8}>
+            <div className={styles.flex_end}>
+              <span className={styles.d_md_block}>Price: <i className={styles.number}>$29</i></span>
+              <button className={`${styles.buttonfx} ${styles.slidebottomleft}`}>
+                Sign up Now
+              </button>
+            </div>
           </Col>
         </Row>
       </div>
