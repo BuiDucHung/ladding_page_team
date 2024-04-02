@@ -24,4 +24,10 @@ body {
   position: relative;
 }
 
+.container_ecommerce {
+  max-width: 1320px;
+  margin: auto;
+  position: relative;
+}
+
 
